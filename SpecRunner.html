@@ -13,19 +13,19 @@
   <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
   <script src="http://chaijs.com/chai.js"></script>
 
-  
   <script>
-    mocha.setup('bdd')
-    // mocha.checkLeaks();
-    // mocha.globals(['jQuery']);
-    mocha.run();
+      mocha.setup('bdd');
+      window.expect = chai.expect;
+      $(function() {
+        mocha.run();
+      })
   </script>
 
     <!-- source files -->
-    <script type="text/javascript" src="source.js"></script>
+    <script type="text/javascript" src="./tree.js"></script>
 
     <!-- spec files -->
-    <script type="text/javascript" src="test.js"></script>
+    <script type="text/javascript" src="./test.js"></script>
 
 </body>
 </html>
